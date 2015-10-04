@@ -1,0 +1,18 @@
+development:
+  adapter: postgresql
+  encoding: unicode  
+  pool: 5
+  database: heroku_resume_development  
+  username: pguser  
+  password: root  
+  host: localhost  
+  port: 5432
+
+test:  
+  database: heroku_resume_test
+
+
+production:
+  database: heroku_resume_production
+  username: heroku_resume
+  password: <%= ENV['HEROKU_RESUME_DATABASE_PASSWORD'] %>
